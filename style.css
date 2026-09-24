@@ -1,4 +1,6 @@
-/* Modern CSS Reset & Variable Setup */
+/* ==========================================================================
+   1. GLOBAL SYSTEM SETUP & MODERN RESET
+   ========================================================================== */
 :root {
     --bg-primary: #ffffff;
     --text-dark: #111827;
@@ -24,7 +26,9 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Navigation Bar Styles */
+/* ==========================================================================
+   2. STICKY GLOBAL NAVIGATION BAR
+   ========================================================================== */
 .navbar {
     width: 100%;
     height: var(--nav-height);
@@ -85,7 +89,9 @@ body {
     border-radius: 2px;
 }
 
-/* Hero Section with Fluid Gradient Background */
+/* ==========================================================================
+   3. HOME PAGE - HERO GRAPHIC SECTION
+   ========================================================================== */
 .hero {
     margin-top: var(--nav-height);
     height: 60vh;
@@ -134,7 +140,9 @@ body {
     opacity: 0.95;
 }
 
-/* Info / Who Are We Section */
+/* ==========================================================================
+   4. HOME PAGE - ABOUT SECTION
+   ========================================================================== */
 .about-section {
     padding: 7rem 2rem;
     max-width: 1200px;
@@ -161,7 +169,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Pill / Rounded Button Styles */
 .btn-sponsor {
     display: inline-block;
     background-color: var(--text-dark);
@@ -180,7 +187,6 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Pattern Graphic Placeholder Matching Figma Mockup */
 .about-image-container {
     width: 100%;
     height: 380px;
@@ -191,7 +197,6 @@ body {
     height: 100%;
     border-radius: 20px;
     background-color: #f1f5f9;
-    /* Clean CSS generated alternative to mimic the graphic blue dots pattern */
     background-image: radial-gradient(var(--accent-teal) 20%, transparent 20%),
                       radial-gradient(var(--accent-blue) 20%, transparent 20%);
     background-size: 60px 60px;
@@ -200,42 +205,12 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Simple Footer Styling */
-.footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 3rem 2rem;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-}
-
-/* Responsive Scaling for Tablets/Phones */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Can be paired with a mobile hamburger toggle later */
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-    
-    .about-image-container {
-        height: 280px;
-    }
-}
-/* ==========================================
-   Our Team Page Additions 
-   ========================================== */
-
-/* Subpage Header Styling */
+/* ==========================================================================
+   5. SUB-PAGE SYSTEM: OUR TEAM LAYOUT
+   ========================================================================== */
 .page-header {
     margin-top: var(--nav-height);
-    background: linear-gradient(135deg, #1e293b, #0f172a);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: #ffffff;
     padding: 5rem 2rem;
     text-align: center;
@@ -253,76 +228,158 @@ body {
     font-size: 1.1rem;
 }
 
-/* 15 Member Grid Layout */
 .team-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 5rem 2rem;
 }
 
+/* Balanced 15-Member Grid Wrapper */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 3rem 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2.5rem;
 }
 
-/* Individual Team Member Cards */
+/* Individual Grid Member Card Container */
 .member-card {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 1.5rem;
+    background: #ffffff;
     border-radius: 16px;
-    transition: transform 0.2s ease;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .member-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Image Space Template Container */
-.avatar-placeholder {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background-color: #f1f5f9;
-    margin: 0 auto 1.25rem auto;
-    border: 2px dashed #cbd5e1; /* Visual guide showing where images go */
+/* Card Upper Slot: Dynamic Image Boundaries */
+.member-image-frame {
+    width: 100%;
+    height: 240px;
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.avatar-placeholder img {
+.member-image-frame::before {
+    content: 'Photo';
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.member-image-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Card Lower Slot: Name & Role Info Box */
+.member-info-box {
+    padding: 1.25rem;
+    text-align: center;
+    background: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .member-name {
-    font-size: 1.15rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
 }
 
+/* Role Badge Base Architecture */
 .member-role {
-    font-size: 0.9rem;
-    color: var(--accent-teal);
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    margin: 0 auto;
 }
 
-/* Dynamic Grid Resizing tweaks */
-@media (max-width: 480px) {
-    .team-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 2rem 1rem;
+/* Clean Custom Color Coding for Selected Sub-Teams */
+.role-captain {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.role-cad {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.role-code {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.role-outreach {
+    background-color: #f3e8ff;
+    color: #6b21a8;
+}
+
+/* ==========================================================================
+   6. GLOBAL STRUCTURAL FOOTER
+   ========================================================================== */
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   7. FLUID MEDIA QUERY BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ready for a custom hamburger menu icon interaction toggle */
     }
     
-    .avatar-placeholder {
-        width: 110px;
-        height: 110px;
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .about-image-container {
+        height: 280px;
+    }
+}
+
+@media (max-width: 640px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.5rem;
+    }
+    .member-image-frame {
+        height: 180px;
     }
 }
