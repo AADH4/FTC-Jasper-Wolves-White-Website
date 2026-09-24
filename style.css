@@ -1,0 +1,230 @@
+/* Modern CSS Reset & Variable Setup */
+:root {
+    --bg-primary: #ffffff;
+    --text-dark: #111827;
+    --text-muted: #4b5563;
+    --accent-teal: #0ea5e9;
+    --accent-blue: #2563eb;
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+    --nav-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--text-dark);
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-teal), var(--accent-blue));
+    border-radius: 2px;
+}
+
+/* Hero Section with Fluid Gradient Background */
+.hero {
+    margin-top: var(--nav-height);
+    height: 60vh;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a, #0d9488, #0284c7);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+    color: #ffffff;
+    padding: 0 1rem;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.hero-content .highlight {
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* Info / Who Are We Section */
+.about-section {
+    padding: 7rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+/* Pill / Rounded Button Styles */
+.btn-sponsor {
+    display: inline-block;
+    background-color: var(--text-dark);
+    color: #ffffff;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-sponsor:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Pattern Graphic Placeholder Matching Figma Mockup */
+.about-image-container {
+    width: 100%;
+    height: 380px;
+}
+
+.pattern-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #f1f5f9;
+    /* Clean CSS generated alternative to mimic the graphic blue dots pattern */
+    background-image: radial-gradient(var(--accent-teal) 20%, transparent 20%),
+                      radial-gradient(var(--accent-blue) 20%, transparent 20%);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+    opacity: 0.85;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Simple Footer Styling */
+.footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive Scaling for Tablets/Phones */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Can be paired with a mobile hamburger toggle later */
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .about-image-container {
+        height: 280px;
+    }
+}
