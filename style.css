@@ -228,3 +228,101 @@ body {
         height: 280px;
     }
 }
+/* ==========================================
+   Our Team Page Additions 
+   ========================================== */
+
+/* Subpage Header Styling */
+.page-header {
+    margin-top: var(--nav-height);
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.header-content p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* 15 Member Grid Layout */
+.team-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 3rem 2rem;
+}
+
+/* Individual Team Member Cards */
+.member-card {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Image Space Template Container */
+.avatar-placeholder {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #f1f5f9;
+    margin: 0 auto 1.25rem auto;
+    border: 2px dashed #cbd5e1; /* Visual guide showing where images go */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.member-role {
+    font-size: 0.9rem;
+    color: var(--accent-teal);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Dynamic Grid Resizing tweaks */
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 2rem 1rem;
+    }
+    
+    .avatar-placeholder {
+        width: 110px;
+        height: 110px;
+    }
+}
