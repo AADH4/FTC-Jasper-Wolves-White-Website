@@ -599,3 +599,150 @@ body {
         height: 210px; 
     }
 }
+/* ==========================================================================
+   9. SPONSORSHIP TIERS PAGE STYLING
+   ========================================================================== */
+.pitch-section {
+    padding: 5rem 2rem 2rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.pitch-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pitch-container h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.5px;
+}
+
+.pitch-container p {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+
+.tiers-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 8rem 2rem;
+}
+
+/* 4-Column Responsive Layout Grid for Cards */
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.tier-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.tier-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.06);
+}
+
+/* Featured Visual Callout Card (Platinum) */
+.tier-card.tier-featured {
+    border: 2px solid var(--accent-blue);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.05);
+}
+
+.featured-ribbon {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: linear-gradient(90deg, var(--accent-teal), var(--accent-blue));
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+}
+
+/* Tier Badges styling rules */
+.tier-badge {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+.badge-silver   { background-color: #f1f5f9; color: #475569; }
+.badge-gold     { background-color: #fef3c7; color: #d97706; }
+.badge-platinum { background-color: #e0f2fe; color: #0369a1; }
+.badge-grand    { background-color: #dcfce7; color: #15803d; }
+
+.tier-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+    margin-bottom: 1.75rem;
+    line-height: 1;
+}
+
+.tier-price span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0;
+}
+
+.tier-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: auto; /* Align boxes bottom boundary evenly */
+}
+
+.tier-benefits li {
+    font-size: 0.95rem;
+    color: #334155;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Minimal pure CSS bullet layout matching figma wireframe */
+.tier-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent-teal);
+    font-weight: 700;
+}
+
+/* Mobile Scaling adjustments */
+@media (max-width: 640px) {
+    .tiers-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .tier-card {
+        padding: 2rem 1.5rem;
+    }
+}
