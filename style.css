@@ -65,7 +65,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .nav-item {
@@ -159,7 +159,7 @@ body {
    4. HOME PAGE - ABOUT SECTION
    ========================================================================== */
 .about-section {
-    padding: 8rem 2rem;
+    padding: 8rem 2rem 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -223,7 +223,125 @@ body {
 }
 
 /* ==========================================================================
-   5. SUB-PAGE SYSTEM: OUR TEAM LAYOUT
+   5. ACHIEVEMENTS & STATISTICS STYLING
+   ========================================================================== */
+.achievements-section {
+    padding: 4rem 2rem 8rem 2rem;
+    background-color: #ffffff;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.stat-card {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.awards-container {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.award-era h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.25rem;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 0.75rem;
+}
+
+.award-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.award-list li {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.award-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.badge-winner {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge-podium {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.award-name {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #334155;
+}
+
+/* ==========================================================================
+   6. SUB-PAGE SYSTEM: OUR TEAM GRID LAYOUT
    ========================================================================== */
 .page-header {
     margin-top: var(--nav-height);
@@ -264,7 +382,7 @@ body {
     border-radius: 20px;
     border: 1px solid #e2e8f0;
     overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -1px rgba(15, 23, 42, 0.02);
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -272,7 +390,7 @@ body {
 
 .member-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
 }
 
 .member-image-frame {
@@ -334,78 +452,150 @@ body {
     margin: 0 auto;
 }
 
-/* Role Branding System Variants */
-.role-captain {
-    background-color: #fef3c7;
-    color: #d97706;
+/* Color Code Role Badges */
+.role-captain { 
+    background-color: #fef3c7; 
+    color: #d97706; 
 }
-
-.role-cad {
-    background-color: #e0f2fe;
-    color: #0369a1;
+.role-cad { 
+    background-color: #e0f2fe; 
+    color: #0369a1; 
 }
-
-.role-code {
-    background-color: #dcfce7;
-    color: #15803d;
+.role-code { 
+    background-color: #dcfce7; 
+    color: #15803d; 
 }
-
-.role-outreach {
-    background-color: #f3e8ff;
-    color: #6b21a8;
+.role-outreach { 
+    background-color: #f3e8ff; 
+    color: #6b21a8; 
 }
-
-.role-build {
-    background-color: #ffedd5;
-    color: #ea580c;
+.role-build { 
+    background-color: #ffedd5; 
+    color: #ea580c; 
 }
 
 /* ==========================================================================
-   6. GLOBAL STRUCTURAL FOOTER
+   7. MULTI-COLUMN DARK FOOTER ARCHITECTURE
    ========================================================================== */
 .footer {
-    border-top: 1px solid rgba(15, 23, 42, 0.06);
-    padding: 4rem 2rem;
-    text-align: center;
-    color: var(--text-muted);
+    background-color: #0f172a;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 5rem 2rem 2rem 2rem;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-brand .footer-logo {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #38bdf8, #2dd4bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-brand p {
+    color: #94a3b8;
     font-size: 0.95rem;
-    background-color: #f8fafc;
+}
+.footer-contact h4, 
+.footer-socials h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+    color: #f8fafc;
+}
+.footer-email {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.footer-email:hover {
+    color: var(--accent-teal);
+}
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.social-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-block;
+}
+.social-links a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
 }
 
 /* ==========================================================================
-   7. FLUID MEDIA QUERY BREAKPOINTS
+   8. FLUID MEDIA QUERY BREAKPOINTS
    ========================================================================== */
 @media (max-width: 968px) {
-    .hero-content h1 {
-        font-size: 3.25rem;
+    .hero-content h1 { 
+        font-size: 3.25rem; 
     }
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 3.5rem;
+    .about-container { 
+        grid-template-columns: 1fr; 
+        gap: 3.5rem; 
     }
-    .about-image-container {
-        height: 320px;
+    .about-image-container { 
+        height: 320px; 
+    }
+    .stats-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1.25rem; 
+    }
+    .footer-container { 
+        grid-template-columns: 1fr; 
+        gap: 3rem; 
     }
 }
-
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .nav-links { 
+        display: none; 
     }
-    .page-header {
-        padding: 4.5rem 1.5rem;
+    .page-header { 
+        padding: 4.5rem 1.5rem; 
     }
-    .page-header h1 {
-        font-size: 2.5rem;
+    .page-header h1 { 
+        font-size: 2.5rem; 
+    }
+    .award-list li { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 0.5rem; 
     }
 }
-
 @media (max-width: 640px) {
-    .team-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1.5rem;
+    .team-grid { 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+        gap: 1.5rem; 
     }
-    .member-image-frame {
-        height: 210px;
+    .member-image-frame { 
+        height: 210px; 
     }
 }
