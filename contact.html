@@ -56,31 +56,39 @@
             </div>
 
             <!-- Form Interaction Column -->
-            <div class="contact-form-panel">
-                <form action="#" method="POST" class="interactive-form">
-                    <div class="form-group">
-                        <label for="user-name">Your Full Name</label>
-                        <input type="text" id="user-name" name="name" placeholder="John Doe" required>
-                    </div>
+            <!-- Form Interaction Column connected to Formspree -->
+<div class="contact-form-panel">
+    <!-- Replace the URL below with your actual Formspree endpoint after you sign up -->
+    <form action="https://formspree.io/f/xqpadjaw" method="POST" class="interactive-form">
+        
+        <div class="form-group">
+            <label for="user-name">Your Full Name</label>
+            <input type="text" id="user-name" name="name" placeholder="John Doe" required>
+        </div>
 
-                    <div class="form-group">
-                        <label for="user-email">Email Address</label>
-                        <input type="email" id="user-email" name="email" placeholder="you@example.com" required>
-                    </div>
+        <div class="form-group">
+            <label for="user-email">Email Address</label>
+            <!-- Formspree needs the type="email" and name="_replyto" to let you click reply in your inbox -->
+            <input type="email" id="user-email" name="_replyto" placeholder="you@example.com" required>
+        </div>
 
-                    <div class="form-group">
-                        <label for="msg-subject">Subject</label>
-                        <input type="text" id="msg-subject" name="subject" placeholder="Sponsorship, Outreach, Mentoring..." required>
-                    </div>
+        <div class="form-group">
+            <label for="msg-subject">Subject</label>
+            <input type="text" id="msg-subject" name="subject" placeholder="Sponsorship, Outreach, Mentoring..." required>
+        </div>
 
-                    <div class="form-group">
-                        <label for="user-message">Message</label>
-                        <textarea id="user-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-                    </div>
+        <div class="form-group">
+            <label for="user-message">Message</label>
+            <textarea id="user-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+        </div>
 
-                    <button type="submit" class="btn-submit">Send Message</button>
-                </form>
-            </div>
+        <!-- Optional hidden input to customize the email subject line you see in your inbox -->
+        <input type="hidden" name="_subject" value="New Website Submission from Jasper White Wolves!">
+
+        <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+</div>
+
 
         </div>
     </section>
