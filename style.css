@@ -453,18 +453,78 @@ p { color: var(--slate); }
     }
 }
 /* ==========================================================================
-   10. SUBPAGE: TEAM ROSTER GRID
+   10. UNIVERSAL SUBPAGE CONTENT GRID PANELS
    ========================================================================== */
-.team-section {
+.subpage-section {
     padding: 6rem 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
 }
-.team-grid {
+
+.layout-split {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.layout-text-block h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-spacing: 1.1;
+    letter-spacing: -.04em;
+    margin-bottom: 1.25rem;
+}
+
+.layout-text-block p {
+    font-size: 1.05rem;
+    color: var(--slate);
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   11. ROBOT SHOWCASE MODULES (Blueprint Frame Architecture)
+   ========================================================================== */
+.blueprint-card-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: var(--ink);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--blue);
+}
+
+.blueprint-grid-lines {
+    position: absolute;
+    inset: 0;
+    background-size: 24px 24px;
+    background-image:
+        linear-gradient(to right, rgba(37, 99, 235, 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(37, 99, 235, 0.12) 1px, transparent 1px);
+}
+
+.blueprint-content {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: var(--sky);
+    font: 700 0.8rem 'Space Mono', monospace;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   12. OUTREACH MODULES (Tactile Editorial Grid)
+   ========================================================================== */
+.outreach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 2.5rem;
     margin-top: 3.5rem;
 }
-.member-card {
+
+.outreach-card {
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: 6px;
@@ -472,63 +532,77 @@ p { color: var(--slate); }
     display: flex;
     flex-direction: column;
 }
-.member-image-frame {
+
+.outreach-image-slot {
     width: 100%;
-    height: 280px;
+    height: 240px;
     background-color: var(--cloud);
     border-bottom: 1px solid var(--line);
     position: relative;
 }
-.member-image-frame::before {
-    content: '[ CAD PHOTO CAPTURE ]';
-    font: 700 .7rem 'Space Mono', monospace;
+
+.outreach-image-slot::before {
+    content: '[ VISUAL RECORD ARCHIVE ]';
+    font: 700 .72rem 'Space Mono', monospace;
     color: var(--muted);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.member-image-frame img {
+
+.outreach-image-slot img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-    z-index: 5;
     top: 0;
     left: 0;
 }
-.member-info-box {
-    padding: 1.5rem;
-}
-.member-name {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 0.5rem;
-}
-.member-role {
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    display: inline-block;
-    border: 1px solid var(--blue);
-    padding: 0.15rem 0.5rem;
+
+.outreach-tag {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+    font: 700 0.68rem 'Space Mono', monospace;
     color: var(--blue);
     background: var(--sky);
+    border: 1px solid var(--blue);
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.outreach-info {
+    padding: 2rem;
+}
+
+.outreach-info h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    margin-bottom: 0.75rem;
+}
+
+.outreach-info p {
+    font-size: 0.98rem;
+    color: var(--slate);
+    line-height: 1.6;
 }
 
 /* ==========================================================================
-   11. SUBPAGE: SPONSOR PACK TIERS
+   13. SPONSOR PACK TIERS (Comparative Pricing Matrices)
    ========================================================================== */
 .tiers-section {
     padding: 4rem 0 8rem 0;
 }
+
 .tiers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
+
 .tier-card {
     background: var(--cloud);
     border: 1px solid var(--line);
@@ -537,10 +611,13 @@ p { color: var(--slate); }
     display: flex;
     flex-direction: column;
 }
+
 .tier-card.tier-featured {
     border: 2px solid var(--blue);
     background-color: #f0f9ff;
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.06);
 }
+
 .tier-badge {
     font-size: 0.7rem;
     font-weight: 700;
@@ -552,6 +629,12 @@ p { color: var(--slate); }
     width: fit-content;
     margin-bottom: 1.5rem;
 }
+
+.badge-silver   { background-color: #ffffff; color: var(--slate); border-color: var(--line); }
+.badge-gold     { background-color: #fef3c7; color: #d97706; border-color: #fde68a; }
+.badge-platinum { background-color: #e0f2fe; color: #0369a1; border-color: #bae6fd; }
+.badge-grand    { background-color: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+
 .tier-price {
     font-size: 2.75rem;
     font-weight: 800;
@@ -559,11 +642,13 @@ p { color: var(--slate); }
     color: var(--ink);
     margin-bottom: 1.5rem;
 }
+
 .tier-price span {
     font-size: 1.1rem;
     font-weight: 400;
     color: var(--muted);
 }
+
 .tier-benefits {
     list-style: none;
     display: flex;
@@ -573,15 +658,163 @@ p { color: var(--slate); }
     padding-top: 1.5rem;
     margin-top: auto;
 }
+
 .tier-benefits li {
     font-size: 0.95rem;
     color: var(--slate);
     padding-left: 1.25rem;
     position: relative;
 }
+
 .tier-benefits li::before {
     content: "▪";
     position: absolute;
     left: 0;
     color: var(--blue);
+}
+
+/* ==========================================================================
+   14. INTERACTIVE TECHNICAL CONTACT PORTALS
+   ========================================================================== */
+.contact-section {
+    padding: 6rem 0 8rem 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-info-panel {
+    background-color: var(--ink);
+    color: var(--paper);
+    padding: 4rem 3.5rem;
+}
+
+.contact-info-panel h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -.04em;
+    margin-bottom: 1rem;
+}
+
+.contact-info-panel p {
+    color: #94a3b8;
+    margin-bottom: 3.5rem;
+    font-size: 1.05rem;
+}
+
+.info-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font: 700 0.7rem 'Space Mono', monospace;
+    text-transform: uppercase;
+    color: var(--brand-light-blue);
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.5px;
+}
+
+.info-link {
+    color: var(--paper);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.info-link:hover {
+    color: var(--brand-light-blue);
+}
+
+.contact-form-panel {
+    padding: 4rem 3.5rem;
+    background-color: var(--cloud);
+}
+
+.interactive-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--line);
+    background-color: var(--paper);
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    width: 100%;
+    color: var(--ink);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px var(--sky);
+}
+
+.btn-submit {
+    background-color: var(--blue);
+    color: var(--paper);
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--blue-dark);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   15. GLOBAL LAYOUT RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+@media (max-width: 968px) {
+    .layout-split,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .outreach-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info-panel, 
+    .contact-form-panel {
+        padding: 2.5rem 2rem;
+    }
 }
