@@ -897,3 +897,31 @@ body {
         height: 240px;
     }
 }
+/* ==========================================================================
+   12. SMOOTH ENGINEERING ENTRANCE ANIMATIONS
+   ========================================================================== */
+.hero,
+.about-section,
+.achievements-section,
+.team-section,
+.tiers-section,
+.outreach-section,
+.contact-section,
+.robot-reveal-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+/* Activated class added instantly by JavaScript */
+.section-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ensure smooth native hardware anchor scrolling when clicking navbar links */
+html {
+    scroll-behavior: smooth;
+}
