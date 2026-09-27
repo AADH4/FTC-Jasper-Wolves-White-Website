@@ -3,120 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Jasper Wolves White Robotics</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Contact - Jasper Wolves White Robotics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Jasper Wolves White</a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="team.html" class="nav-item">Our Team</a>
-                <a href="robot.html" class="nav-item">Our Robot</a>
-                <a href="outreach.html" class="nav-item">Outreach</a>
-                <a href="sponsors.html" class="nav-item">Sponsors</a>
-                <a href="contact.html" class="nav-item active">Contact</a>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="nav-logo">
+                <span class="logo-text">Wolves White</span>
+                <span class="logo-team">#19897</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="robot.html" class="nav-link">Robot</a></li>
+                <li><a href="outreach.html" class="nav-link">Outreach</a></li>
+                <li><a href="sponsors.html" class="nav-link">Sponsors</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="header-content">
-            <h1>Connect With Us</h1>
-            <p>Have questions, sponsorship inquiries, or want to collaborate on an outreach event?</p>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="section-title">Connect With Us</h1>
+                <p class="section-description">Have questions, sponsorship inquiries, or want to collaborate? Let's talk.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Portal Grid Layout -->
-    <section class="contact-section">
-        <div class="contact-container">
-            
-            <!-- Sidebar Info Column -->
-            <div class="contact-info-panel">
-                <h2>Direct Channels</h2>
-                <p>Feel free to reach out directly through our formal email or follow our real-time building updates via social media.</p>
-                
-                <div class="info-details-list">
-                    <div class="info-item">
-                        <span class="info-label">Official Email Address</span>
-                        <a href="mailto:jasperwolveswhite@gmail.com" class="info-link">jasperwolveswhite@gmail.com</a>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Instagram Handle</span>
-                        <a href="https://www.instagram.com/jasper_white_robotics?stkn=MTBka3c3bTdyajBzbQ==" target="_blank" rel="noopener" class="info-link">@jasper_white_robotics</a>
+    <!-- Contact Section -->
+    <section style="padding: 7rem 0; border-bottom: 1px solid var(--line);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p style="font-size: 1.05rem; color: var(--slate); margin-bottom: 2rem; line-height: 1.8;">
+                        Reach out through email, follow our social channels, or fill out the form and we'll respond as soon as possible.
+                    </p>
+                    <div style="space-y: 1.5rem;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: .85rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem;">Email</p>
+                            <a href="mailto:jasperwolveswhite@gmail.com" style="color: var(--slate); font-size: 1.1rem; font-weight: 600;">jasperwolveswhite@gmail.com</a>
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <p style="font-size: .85rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .5rem;">Instagram</p>
+                            <a href="https://instagram.com/jasper_white_robotics" target="_blank" rel="noopener" style="color: var(--slate); font-size: 1.1rem; font-weight: 600;">@jasper_white_robotics</a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="contact-right">
+                    <form action="https://formspree.io/f/xqpadjaw" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                        <div>
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Name</label>
+                            <input type="text" name="name" placeholder="John Doe" required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Email</label>
+                            <input type="email" name="_replyto" placeholder="you@example.com" required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Subject</label>
+                            <input type="text" name="subject" placeholder="Sponsorship, Outreach, etc." required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Message</label>
+                            <textarea name="message" rows="5" placeholder="Your message..." required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New message from Jasper Wolves White" />
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
             </div>
-
-            <!-- Form Interaction Column -->
-            <!-- Form Interaction Column connected to Formspree -->
-<div class="contact-form-panel">
-    <!-- Replace the URL below with your actual Formspree endpoint after you sign up -->
-    <form action="https://formspree.io/f/xqpadjaw" method="POST" class="interactive-form">
-        
-        <div class="form-group">
-            <label for="user-name">Your Full Name</label>
-            <input type="text" id="user-name" name="name" placeholder="John Doe" required>
-        </div>
-
-        <div class="form-group">
-            <label for="user-email">Email Address</label>
-            <!-- Formspree needs the type="email" and name="_replyto" to let you click reply in your inbox -->
-            <input type="email" id="user-email" name="_replyto" placeholder="you@example.com" required>
-        </div>
-
-        <div class="form-group">
-            <label for="msg-subject">Subject</label>
-            <input type="text" id="msg-subject" name="subject" placeholder="Sponsorship, Outreach, Mentoring..." required>
-        </div>
-
-        <div class="form-group">
-            <label for="user-message">Message</label>
-            <textarea id="user-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
-        </div>
-
-        <!-- Optional hidden input to customize the email subject line you see in your inbox -->
-        <input type="hidden" name="_subject" value="New Website Submission from Jasper Wolves White!">
-
-        <button type="submit" class="btn-submit">Send Message</button>
-    </form>
-</div>
-
-
         </div>
     </section>
 
-    <!-- Modern Footer -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <span class="footer-logo">Jasper Wolves White</span>
-                <p>FIRST Tech Challenge Team #19897</p>
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Jasper Wolves White</h4>
+                <p>FTC Team #19897<br>Plano, Texas</p>
             </div>
-            
-            <div class="footer-contact">
-                <h4>Get In Touch</h4>
-                <a href="mailto:jasperwolveswhiterobotics@gmail.com" class="footer-email">jasperwolveswhiterobotics@gmail.com</a>
-            </div>
-
-            <div class="footer-socials">
-                <h4>Follow Our Journey</h4>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="mailto:jasperwolveswhite@gmail.com">jasperwolveswhite@gmail.com</a>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/jasper_white_robotics?stkn=MTBka3c3bTdyajBzbQ==" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://instagram.com/jasper_white_robotics" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
                 </div>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="team.html">Team</a>
+                <a href="robot.html">Robot</a>
+                <a href="sponsors.html">Sponsors</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Jasper White Wolves Robotics. All rights reserved.</p>
+            <p>&copy; 2026 Jasper Wolves White Robotics. Engineered with precision.</p>
         </div>
     </footer>
-<script src="animation.js"></script>
+
+    <script src="animation.js"></script>
 </body>
 </html>
