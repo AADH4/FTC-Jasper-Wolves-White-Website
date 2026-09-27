@@ -4,19 +4,21 @@
 @import url('https://googleapis.com');
 
 :root {
-    --bg-main: #fafafa;
-    --bg-card: #ffffff;
-    --text-main: #121212;
-    --text-muted: #5a5a5a;
+    /* Bright, Dominate White Canvas Palette */
+    --bg-main: #ffffff;
+    --bg-card: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #475569;
     
-    /* Unique Team Color Palette: Crimson, Steel, and Slate */
-    --brand-crimson: #d91b2b;
-    --brand-dark: #1a1a1a;
-    --steel-gray: #e5e7eb;
-    --wolf-gray: #3f3f46;
+    /* Verified Polar Blue Logo Palette Shades */
+    --brand-polar-blue: #0ea5e9;
+    --brand-light-blue: #38bdf8;
+    --brand-dark: #0f172a;
+    --border-gray: #e2e8f0;
     
     --nav-height: 70px;
-    --border-clean: 1px solid #121212;
+    --border-clean: 1px solid #e2e8f0;
+    --border-accent: 1px solid #0ea5e9;
 }
 
 * {
@@ -34,7 +36,7 @@ body {
 }
 
 /* ==========================================================================
-   2. STRUCTURAL NAVIGATION (Human & Minimalist)
+   2. STRUCTURAL NAVIGATION (Polar Theme Minimalist)
    ========================================================================== */
 .navbar {
     width: 100%;
@@ -62,7 +64,7 @@ body {
     font-size: 1.15rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--text-main);
+    color: var(--brand-dark);
     text-decoration: none;
 }
 
@@ -83,7 +85,7 @@ body {
 }
 
 .nav-item:hover, .nav-item.active {
-    color: var(--brand-crimson);
+    color: var(--brand-polar-blue);
 }
 
 .nav-item.active {
@@ -91,20 +93,21 @@ body {
 }
 
 /* ==========================================================================
-   3. HOME PAGE HERO & RAW TEXT LAYOUTS
+   3. HOME PAGE HERO & LINEAR TEXT LAYOUTS
    ========================================================================== */
 .hero {
     margin-top: var(--nav-height);
     height: 55vh;
     min-height: 380px;
-    background-color: var(--brand-dark);
-    color: #ffffff;
+    background-color: #f8fafc;
+    color: var(--brand-dark);
     display: flex;
     align-items: center;
     padding: 0 2rem;
     position: relative;
-    /* Clean blueprint crosshair subtle design detail */
-    background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+    border-bottom: var(--border-clean);
+    /* Clean polar engineering crosshair layout grid texture */
+    background-image: radial-gradient(rgba(14, 165, 233, 0.15) 1px, transparent 1px);
     background-size: 30px 30px;
 }
 
@@ -125,17 +128,18 @@ body {
 }
 
 .hero-content .highlight {
-    color: var(--brand-crimson);
+    color: var(--brand-polar-blue);
 }
 
 .hero-subtitle {
     font-size: 1rem;
-    color: #a1a1aa;
+    color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
-/* Editorial Profile Layout Structure */
+/* Editorial Profile Section Layout */
 .about-section {
     padding: 6rem 2rem;
     max-width: 1300px;
@@ -165,10 +169,10 @@ body {
     max-width: 650px;
 }
 
-/* Industrial Geometric Button Block */
+/* Angular Mechanical Action Button */
 .btn-sponsor {
     display: inline-block;
-    background-color: var(--text-main);
+    background-color: var(--brand-dark);
     color: #ffffff;
     padding: 0.75rem 2rem;
     text-decoration: none;
@@ -176,13 +180,13 @@ body {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border: var(--border-clean);
-    transition: background-color 0.2s ease, color 0.2s ease;
+    border: 1px solid var(--brand-dark);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-sponsor:hover {
-    background-color: var(--brand-crimson);
-    color: #ffffff;
+    background-color: var(--brand-polar-blue);
+    border-color: var(--brand-polar-blue);
 }
 
 .about-image-container {
@@ -195,9 +199,9 @@ body {
     height: 100%;
     border: var(--border-clean);
     background-color: #ffffff;
-    /* Clean, tactile engineering grid backing texture */
-    background-image: linear-gradient(#e5e7eb 1px, transparent 1px),
-                      linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+    /* Clean ice-blue blueprint backing matrix texture */
+    background-image: linear-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
     background-size: 20px 20px;
 }
 
@@ -231,7 +235,6 @@ body {
     text-align: left;
 }
 
-/* Border lines separating modules strictly */
 .stat-card:not(:last-child) {
     border-right: var(--border-clean);
 }
@@ -240,7 +243,7 @@ body {
     display: block;
     font-size: 4rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: var(--brand-polar-blue);
     line-height: 1;
     margin-bottom: 0.5rem;
     letter-spacing: -2px;
@@ -265,7 +268,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--brand-crimson);
+    color: var(--brand-polar-blue);
     margin-bottom: 1.5rem;
 }
 
@@ -281,14 +284,14 @@ body {
     grid-template-columns: 100px 1fr;
     align-items: start;
     padding: 1.25rem 0;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border-gray);
 }
 
 .award-badge {
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--text-main);
+    color: var(--brand-polar-blue);
     letter-spacing: 0.5px;
 }
 
@@ -303,8 +306,8 @@ body {
    ========================================================================== */
 .page-header {
     margin-top: var(--nav-height);
-    background-color: var(--brand-dark);
-    color: #ffffff;
+    background-color: var(--bg-card);
+    color: var(--brand-dark);
     padding: 5rem 2rem;
     border-bottom: var(--border-clean);
 }
@@ -323,7 +326,7 @@ body {
 }
 
 .header-content p {
-    color: #a1a1aa;
+    color: var(--text-muted);
     font-size: 1.05rem;
 }
 
@@ -340,7 +343,7 @@ body {
 }
 
 .member-card {
-    background: var(--bg-card);
+    background: var(--bg-main);
     border: var(--border-clean);
     display: flex;
     flex-direction: column;
@@ -349,16 +352,16 @@ body {
 .member-image-frame {
     width: 100%;
     height: 280px;
-    background-color: #f3f4f6;
+    background-color: #f1f5f9;
     border-bottom: var(--border-clean);
     position: relative;
 }
 
 .member-image-frame::before {
-    content: '[ PHOTO RECORD ]';
+    content: '[ CAD PHOTO CAPTURE ]';
     font-size: 0.7rem;
     font-weight: 500;
-    color: #9ca3af;
+    color: #94a3b8;
     letter-spacing: 1px;
     position: absolute;
     top: 50%;
@@ -393,15 +396,16 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     display: inline-block;
-    border: 1px solid var(--text-main);
+    border: 1px solid var(--brand-polar-blue);
     padding: 0.15rem 0.5rem;
-    color: var(--text-main);
-    background: transparent;
+    color: var(--brand-polar-blue);
+    background: #f0f9ff;
 }
 
-/* Consistent Minimal Variant Badges */
-.role-captain, .badge-grand { background-color: #fef2f2; color: var(--brand-crimson); border-color: var(--brand-crimson); }
-.role-build { background-color: #fafafa; }
+/* Specific Role Identity Badge Tints */
+.role-captain { background-color: #e0f2fe; color: #0369a1; border-color: #0369a1; }
+.role-build { background-color: #f8fafc; color: var(--text-main); border-color: var(--brand-dark); }
+.role-code { background-color: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
 
 /* ==========================================================================
    6. SPONSOR TIERS & OUTREACH COMPACT UNITS
@@ -437,146 +441,6 @@ body {
     flex-direction: column;
 }
 
-.tier-card.tier-featured {
-    background-color: var(--brand-dark);
-    color: #ffffff;
-    border-color: var(--brand-dark);
-}
-
-.tier-card.tier-featured .tier-price, 
-.tier-card.tier-featured .member-name, 
-.tier-card.tier-featured .tier-benefits li {
-    color: #ffffff;
-}
-
-.tier-card.tier-featured .tier-badge {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-.featured-ribbon { 
-    display: none; 
-} /* Removed artificial AI element */
-
-.tier-price {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -1.5px;
-    margin-bottom: 1.5rem;
-}
-
-.tier-benefits {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    border-top: 1px solid #e5e7eb;
-    padding-top: 1.5rem;
-}
-
-.tier-benefits li {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-}
-
-/* Outreach Layout System Split Blocks */
-.outreach-title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-}
-
-.outreach-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-}
-
-.outreach-card {
-    background: var(--bg-card);
-    border: var(--border-clean);
-}
-
-.outreach-image-slot {
-    width: 100%;
-    height: 220px;
-    background-color: #f3f4f6;
-    border-bottom: var(--border-clean);
-    position: relative;
-}
-
-.outreach-info {
-    padding: 1.5rem;
-}
-
-.outreach-info h3 {
-    font-size: 1.35rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-.outreach-info p {
-    color: var(--text-muted);
-}
-
-/* ==========================================================================
-   7. INDUSTRIAL REVEAL PLOT (Robot Page Blueprint)
-   ========================================================================== */
-.robot-reveal-section {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 6rem 2rem;
-}
-
-.reveal-container {
-    text-align: left;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-}
-
-.robot-reveal-section h2 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    line-height: 1;
-    margin: 1rem 0;
-}
-
-.blueprint-card-placeholder {
-    width: 100%;
-    height: 450px;
-    background-color: #111827;
-    border: var(--border-clean);
-    position: relative;
-}
-
-.blueprint-grid-lines {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: 30px 30px;
-    background-image:
-        linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
-}
-
-.blueprint-content {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    color: #ffffff;
-}
-
-.blueprint-icon { 
-    display: none; 
-} /* Removed cheesy spinning gear emoji */
-
-/* ==========================================================================
-   8. TECHNICAL CONTACT PORTAL PANELS
-   ========================================================================== */
-.contact-container {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     border: var(--border-clean);
@@ -597,15 +461,16 @@ body {
 
 .contact-form-panel {
     padding: 4rem;
+    background-color: var(--bg-main);
 }
 
 .form-group input, 
 .form-group textarea {
     font-family: inherit;
-    border: 1px solid #cbd5e1;
-    background-color: #ffffff;
+    border: 1px solid var(--border-gray);
+    background-color: #f8fafc;
     padding: 0.75rem;
-    border-radius: 0; /* Strict angular industrial corner boundaries */
+    border-radius: 0; /* Strict angular corners */
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -613,11 +478,12 @@ body {
 .form-group input:focus, 
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--brand-crimson);
+    border-color: var(--brand-polar-blue);
+    background-color: #ffffff;
 }
 
 .btn-submit {
-    background-color: var(--text-main);
+    background-color: var(--brand-dark);
     color: #ffffff;
     text-transform: uppercase;
     font-family: inherit;
@@ -626,19 +492,21 @@ body {
     border: none;
     cursor: pointer;
     width: auto;
+    transition: background-color 0.2s ease;
 }
 
 .btn-submit:hover {
-    background-color: var(--brand-crimson);
+    background-color: var(--brand-polar-blue);
 }
 
 /* ==========================================================================
-   9. GLOBAL HUMANIZED GRID SYSTEM FOOTER
+   9. GLOBAL HUMANIZED FOOTER SYSTEM
    ========================================================================== */
 .footer {
-    background-color: var(--brand-dark);
-    color: #ffffff;
+    background-color: var(--bg-card);
+    color: var(--text-main);
     padding: 5rem 2rem 3rem 2rem;
+    border-top: var(--border-clean);
 }
 
 .footer-container {
@@ -648,7 +516,7 @@ body {
     grid-template-columns: 2fr 1fr 1fr;
     gap: 4rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid #2d2d30;
+    border-bottom: var(--border-clean);
 }
 
 .footer-brand .footer-logo {
@@ -660,7 +528,7 @@ body {
 }
 
 .footer-brand p { 
-    color: #a1a1aa; 
+    color: var(--text-muted); 
 }
 
 .footer-contact h4, 
@@ -669,19 +537,18 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 1rem;
-    color: #ffffff;
 }
 
 .footer-email, 
 .social-links a {
-    color: #a1a1aa;
+    color: var(--text-muted);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .footer-email:hover, 
 .social-links a:hover {
-    color: var(--brand-crimson);
+    color: var(--brand-polar-blue);
 }
 
 .social-links { 
@@ -694,12 +561,12 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     padding-top: 2rem;
-    color: #71717a;
+    color: var(--text-muted);
     font-size: 0.85rem;
 }
 
 /* ==========================================================================
-   10. SYSTEM MOBILE MEDIA QUERY RESPONSIVENESS
+   10. MOBILE RESPONSIVENESS OVERRIDES
    ========================================================================== */
 @media (max-width: 968px) {
     .hero-content h1 { 
