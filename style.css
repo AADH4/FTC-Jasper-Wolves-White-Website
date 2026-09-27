@@ -188,24 +188,28 @@ p { color: var(--slate); }
 .stat-label { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
 
 /* ==========================================================================
-   6. REWORKED HORIZONTAL SEASONS TIMELINE
+   6. HORIZONTAL LINEAR TIMELINE (Strict Geometric Row)
    ========================================================================== */
-.timeline-section { padding: 7rem 0; background: var(--cloud); border-bottom: 1px solid var(--line); }
-
-.timeline-horizontal { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 2.5rem; 
-  position: relative; 
-  margin-top: 3rem;
-  padding-top: 2rem;
+.timeline-section { 
+  padding: 8rem 0; 
+  background: var(--cloud); 
+  border-bottom: 1px solid var(--line); 
 }
 
-/* Universal continuous horizontal line indicator across steps */
-.timeline-horizontal::before {
+/* Linear Horizontal Track */
+.timeline-linear-track { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; /* Exactly two major balanced blocks side-by-side */
+  gap: 0; 
+  position: relative; 
+  margin-top: 4rem;
+}
+
+/* Continuous background alignment wire stretching across columns */
+.timeline-linear-track::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 6px; /* Align perfectly with 12px circular node center point */
   left: 0;
   right: 0;
   height: 2px;
@@ -213,35 +217,92 @@ p { color: var(--slate); }
   z-index: 1;
 }
 
-.timeline-item { position: relative; display: flex; flex-direction: column; }
+.timeline-stage { 
+  position: relative; 
+  padding-top: 2rem; 
+}
 
-/* Timeline Node / Circle Markers placement */
-.timeline-item::before { 
-  content: ''; 
-  position: absolute; 
+/* The structural node point pinned directly on top wire */
+.timeline-marker {
+  position: absolute;
+  top: 1px;
   left: 0;
-  top: -7px; /* Perfectly balance node on the 2px horizontal top tracking border line */
-  width: 12px; 
-  height: 12px; 
-  border-radius: 50%; 
-  background: var(--blue); 
-  border: 2px solid var(--paper); 
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--muted);
+  border: 2px solid var(--cloud);
   z-index: 2;
 }
 
-/* Visual blue progress glow block variant indicating current or target item */
-.timeline-item:last-child::before {
-  background: var(--ink);
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+/* Accent highlight styling for current season block nodes */
+.stage-active .timeline-marker {
+  background: var(--blue);
+  box-shadow: 0 0 0 4px var(--sky);
+}
+
+.timeline-content {
+  padding-right: 2rem;
 }
 
 .timeline-year { 
   display: block; 
-  font-size: 1.1rem; 
-  font-weight: 800; 
-  color: var(--blue); 
-  letter-spacing: -.02em; 
-  margin-bottom: .75rem; 
+  font: 700 1.25rem 'Space Mono', monospace; 
+  color: var(--ink); 
+  margin-bottom: 1.25rem; 
+}
+
+.stage-active .timeline-year {
+  color: var(--blue);
+}
+
+/* Structural clean list for data visibility inside layout columns */
+.timeline-medal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.timeline-medal-list li {
+  font-size: .95rem;
+  color: var(--slate);
+}
+
+.timeline-medal-list li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.timeline-medal-list .loc {
+  color: var(--muted);
+  font-size: .85rem;
+  margin-left: .25rem;
+}
+
+/* ==========================================================================
+   7. TIMELINE RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+@media (max-width: 768px) {
+  .timeline-linear-track { 
+    grid-template-columns: 1fr; 
+    gap: 3rem; 
+    padding-left: 1.5rem;
+  }
+  .timeline-linear-track::before { 
+    top: 0; 
+    bottom: 0; 
+    left: 5px; 
+    width: 2px; 
+    height: 100%; 
+  }
+  .timeline-stage { 
+    padding-top: 0; 
+  }
+  .timeline-marker { 
+    top: 6px; 
+    left: -1.5rem; 
+  }
 }
 
 .timeline-desc { color: var(--slate); font-size: 0.95rem; line-height: 1.6; }
