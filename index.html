@@ -3,131 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasper Wolves White Robotics</title>
-    <link rel="preconnect" href="https: googleapis.com">
-    <link rel="preconnect" href="https: gstatic.com" crossorigin>
-    <link href="https: googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Jasper Wolves White Robotics - FTC Team #19897</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Professional Expanded Navigation Bar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Jasper Wolves White</a>
-            <nav class="nav-links">
-                <a href="index.html" class="nav-item active">Home</a>
-                <a href="team.html" class="nav-item">Our Team</a>
-                <a href="robot.html" class="nav-item">Our Robot</a>
-                <a href="outreach.html" class="nav-item">Outreach</a>
-                <a href="sponsors.html" class="nav-item">Sponsors</a>
-                <a href="contact.html" class="nav-item">Contact</a>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <div class="nav-logo">
+                <span class="logo-text">Wolves White</span>
+                <span class="logo-team">#19897</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="robot.html" class="nav-link">Robot</a></li>
+                <li><a href="outreach.html" class="nav-link">Outreach</a></li>
+                <li><a href="sponsors.html" class="nav-link">Sponsors</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- Large Visual Hero Section -->
-    <section class="hero">
-        <div class="hero-split-container">
-            <div class="hero-text-block">
-                <h1>Jasper Wolves White<br><span class="highlight">FTC Team #19897</span></h1>
-                <p class="hero-tagline">Engineering. Innovation. Community.</p>
-                <div class="hero-cta-buttons">
-                    <a href="team.html" class="btn-primary">Meet Our Team</a>
-                    <a href="sponsors.html" class="btn-secondary">Sponsor Us</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Jasper Wolves<br><span class="highlight">White</span>
+                </h1>
+                <p class="hero-subtitle">FTC Team #19897 | Plano, Texas</p>
+                <p class="hero-description">
+                    Where engineering meets innovation. We build competitive robots, design intelligent systems, and push the boundaries of what's possible in FIRST Robotics.
+                </p>
+                <div class="hero-cta">
+                    <a href="team.html" class="btn btn-primary">Explore Our Team</a>
+                    <a href="sponsors.html" class="btn btn-secondary">Partner With Us</a>
                 </div>
             </div>
-            <div class="hero-image-block">
-                <!-- Drop your main team photo or robot CAD image path here -->
-                <div class="hero-photo-placeholder">[ PRIMARY TEAM / ROBOT PHOTOGRAPHY RECORD ]</div>
+            <div class="hero-visual">
+                <div class="hero-image-placeholder">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="40" width="160" height="120" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="50" cy="130" r="8" fill="currentColor"/>
+                        <circle cx="150" cy="130" r="8" fill="currentColor"/>
+                        <rect x="60" y="80" width="80" height="30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <text x="100" y="155" text-anchor="middle" font-size="10" fill="currentColor">ROBOT 2026</text>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Visual Achievement Cards Section -->
-    <section class="achievements-section">
-        <h2 class="section-title">OUR METRICS</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-number">15</span>
-                <span class="stat-label">Active Members</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">6</span>
-                <span class="stat-label">Competitive Seasons</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">6+</span>
-                <span class="stat-label">Major Awards Won</span>
-            </div>
-        </div>
-
-        <!-- Historical Season Timeline -->
-        <h2 class="section-title">TIMELINE & CHRONOLOGY</h2>
-        <div class="timeline-container">
-            <div class="timeline-node">
-                <span class="timeline-year">2021</span>
-                <p class="timeline-desc">Team Founded & Initial Mechanical R&D Infrastructure Set Up.</p>
-            </div>
-            <div class="timeline-node">
-                <span class="timeline-year">2022</span>
-                <p class="timeline-desc">First Competitive Season Exploration & Tournament Launch.</p>
-            </div>
-            <div class="timeline-node">
-                <span class="timeline-year">2023</span>
-                <p class="timeline-desc">UIL State Championship Finalist Alliance Captain | Regionals Think Award 3rd | Connect & Winning Alliance Honors.</p>
-            </div>
-            <div class="timeline-node">
-                <span class="timeline-year">2024–25</span>
-                <p class="timeline-desc">Drivetrain Optimization, Odometry Tuning, and Structural Re-Engineering Phases.</p>
-            </div>
-            <div class="timeline-node">
-                <span class="timeline-year">2026</span>
-                <p class="timeline-desc">Control Award Winner (League Tournament) & Design Award 2nd Place (Semi-Regionals).</p>
+    <!-- Stats Overview -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-label">Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Competitive Seasons</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Major Awards</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Commitment</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Strong Sponsor Callout Section -->
-    <section class="about-section sponsor-callout">
-        <div class="about-container">
-            <div class="about-text">
-                <h2>HELP US BUILD THE FUTURE</h2>
-                <p>Your support helps our high school students gain hands-on, critical industry experience in hardware engineering, software architecture, CAD design, and collaborative teamwork. Your funding directly drives robot prototyping materials, competition registry fees, manufacturing tools, and community STEM workshops.</p>
-                <a href="sponsors.html" class="btn-sponsor">Become a Sponsor →</a>
-            </div>
-            <div class="about-image-container">
-                <div class="pattern-placeholder"></div>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">About Wolves White</h2>
+                    <p>
+                        We are a dedicated team of students driven by curiosity, collaboration, and a passion for robotics. Since our founding in 2021, we've grown from an ambitious vision into a competitive force in FIRST Tech Challenge, combining engineering excellence with community leadership.
+                    </p>
+                    <p>
+                        Our mission extends beyond competition—we're committed to inspiring the next generation of engineers and innovators through hands-on experience, rigorous design, and meaningful outreach.
+                    </p>
+                    <a href="team.html" class="link-arrow">Learn more about our team →</a>
+                </div>
+                <div class="about-visual">
+                    <div class="about-image-placeholder">
+                        <div class="placeholder-grid"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Unified Human Grid System Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <span class="footer-logo">Jasper Wolves White</span>
-                <p>FTC Team #19897 | Plano, Texas</p>
-            </div>
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            <p class="section-description">Six years of growth, innovation, and unforgettable competition</p>
             
-            <div class="footer-contact">
-                <h4>Get In Touch</h4>
-                <a href="mailto:jasperwolveswhite@gmail.com" class="footer-email">jasperwolveswhite@gmail.com</a>
-            </div>
+            <div class="timeline-vertical">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2021</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Team Founded</h3>
+                        <p>Initial Mechanical R&D Infrastructure Set Up</p>
+                    </div>
+                </div>
 
-            <div class="footer-socials">
-                <h4>Follow Our Journey</h4>
-                <div class="social-links">
-                    <a href="https: instagram.com" target="_blank" rel="noopener">Instagram</a>
-                    <a href="https: youtube.com" target="_blank" rel="noopener">YouTube</a>
-                    <a href="https: github.com" target="_blank" rel="noopener">GitHub</a>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2022</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>First Competition</h3>
+                        <p>First Competitive Season Exploration & Tournament Launch</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2023</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Major Achievements</h3>
+                        <p>UIL State Championship Finalist Alliance Captain | Regionals Think Award 3rd | Connect & Winning Alliance Honors</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2024-25</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>System Optimization</h3>
+                        <p>Drivetrain Optimization, Odometry Tuning, and Structural Re-Engineering Phases</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2026</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Peak Performance</h3>
+                        <p>Control Award Winner (League Tournament) & Design Award 2nd Place (Semi-Regionals)</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Jasper Wolves White Robotics. Manufactured with precision.</p>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">What Drives Us</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Engineering Excellence</h3>
+                    <p>Rigorous design and precision manufacturing push the limits of competitive robotics.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>We challenge conventions and develop novel solutions to complex problems.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Collaboration</h3>
+                    <p>From mechanical to software, every role is essential to our success.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Community</h3>
+                    <p>We inspire and mentor younger students through outreach and engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Be Part of Something Extraordinary</h2>
+                <p>Whether you're interested in joining our team, sponsoring our mission, or learning more about robotics, we'd love to connect with you.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Jasper Wolves White</h4>
+                    <p>FTC Team #19897<br>Plano, Texas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="mailto:jasperwolveswhite@gmail.com">jasperwolveswhite@gmail.com</a>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+                        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <a href="team.html">Team</a>
+                    <a href="robot.html">Robot</a>
+                    <a href="sponsors.html">Sponsors</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jasper Wolves White Robotics. Engineered with precision.</p>
+            </div>
         </div>
     </footer>
-<script src = "animation.js"></script>
+
+    <script src="animation.js"></script>
 </body>
 </html>
