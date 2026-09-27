@@ -1,24 +1,23 @@
 /* ==========================================================================
-   1. DESIGN SYSTEM VARIABLES & CUSTOM TYPOGRAPHY
+   1. STRUCTURAL SYSTEM ARCHITECTURE & BRAND TYPOGRAPHY
    ========================================================================== */
 @import url('https://googleapis.com');
 
 :root {
-    /* Bright, Dominate White Canvas Palette */
+    /* Pure White and Crisp Technical Canvas */
     --bg-main: #ffffff;
     --bg-card: #f8fafc;
     --text-main: #0f172a;
     --text-muted: #475569;
     
-    /* Verified Polar Blue Logo Palette Shades */
+    /* Verified Polar Blue Logo Palette Accents */
     --brand-polar-blue: #0ea5e9;
     --brand-light-blue: #38bdf8;
     --brand-dark: #0f172a;
-    --border-gray: #e2e8f0;
+    --border-clean: 1px solid #0f172a;
+    --border-light: 1px solid #e2e8f0;
     
-    --nav-height: 70px;
-    --border-clean: 1px solid #e2e8f0;
-    --border-accent: 1px solid #0ea5e9;
+    --nav-height: 80px;
 }
 
 * {
@@ -31,12 +30,12 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--bg-main);
     color: var(--text-main);
-    line-height: 1.5;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
 /* ==========================================================================
-   2. STRUCTURAL NAVIGATION (Polar Theme Minimalist)
+   2. TYPOGRAPHIC NAVBAR (Minimalist Lettering)
    ========================================================================== */
 .navbar {
     width: 100%;
@@ -50,18 +49,18 @@ body {
 }
 
 .nav-container {
-    max-width: 1300px;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 .logo {
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--brand-dark);
@@ -77,11 +76,10 @@ body {
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    transition: color 0.2s ease;
-    padding: 0.25rem 0;
+    transition: color 0.15s ease;
 }
 
 .nav-item:hover, .nav-item.active {
@@ -93,56 +91,45 @@ body {
 }
 
 /* ==========================================================================
-   3. HOME PAGE HERO & LINEAR TEXT LAYOUTS
+   3. EDITORIAL PAGE HEADER STRUCTURE
    ========================================================================== */
-.hero {
+.page-header, .hero {
     margin-top: var(--nav-height);
-    height: 55vh;
-    min-height: 380px;
-    background-color: #f8fafc;
-    color: var(--brand-dark);
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
-    position: relative;
+    background-color: var(--bg-main);
+    padding: 6rem 1.5rem 4rem 1.5rem;
     border-bottom: var(--border-clean);
-    /* Clean polar engineering crosshair layout grid texture */
-    background-image: radial-gradient(rgba(14, 165, 233, 0.15) 1px, transparent 1px);
-    background-size: 30px 30px;
 }
 
-.hero-content {
-    max-width: 1300px;
+.header-content, .hero-content {
+    max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
-    text-align: left;
 }
 
-.hero-content h1 {
-    font-size: 4.5rem;
-    font-weight: 700;
+.header-content h1, .hero-content h1 {
+    font-size: 3.5rem;
     text-transform: uppercase;
-    line-height: 0.95;
-    letter-spacing: -2px;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
     margin-bottom: 1rem;
+}
+
+.header-content p, .hero-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
 }
 
 .hero-content .highlight {
     color: var(--brand-polar-blue);
 }
 
-.hero-subtitle {
-    font-size: 1rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-
-/* Editorial Profile Section Layout */
-.about-section {
-    padding: 6rem 2rem;
-    max-width: 1300px;
+/* ==========================================================================
+   4. HOME PAGE - CORE INDEX BLOCKS
+   ========================================================================== */
+.about-section, .achievements-section {
+    padding: 6rem 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
     border-bottom: var(--border-clean);
 }
@@ -150,12 +137,11 @@ body {
 .about-container {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    gap: 6rem;
-    align-items: start;
+    gap: 4rem;
 }
 
-.about-text h2 {
-    font-size: 2.5rem;
+.about-text h2, .section-title, .outreach-title {
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -164,75 +150,47 @@ body {
 
 .about-text p {
     color: var(--text-muted);
-    font-size: 1.15rem;
-    margin-bottom: 2.5rem;
-    max-width: 650px;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
-/* Angular Mechanical Action Button */
 .btn-sponsor {
     display: inline-block;
     background-color: var(--brand-dark);
     color: #ffffff;
-    padding: 0.75rem 2rem;
+    padding: 0.75rem 1.75rem;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border: 1px solid var(--brand-dark);
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    border: var(--border-clean);
+    transition: background-color 0.2s ease;
 }
 
 .btn-sponsor:hover {
     background-color: var(--brand-polar-blue);
-    border-color: var(--brand-polar-blue);
 }
 
 .about-image-container {
     width: 100%;
-    height: 350px;
-}
-
-.pattern-placeholder {
-    width: 100%;
-    height: 100%;
+    height: 320px;
     border: var(--border-clean);
-    background-color: #ffffff;
-    /* Clean ice-blue blueprint backing matrix texture */
     background-image: linear-gradient(rgba(14, 165, 233, 0.08) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
     background-size: 20px 20px;
 }
 
-/* ==========================================================================
-   4. HOME PAGE - STATISTICS & AWARDS CHRONOLOGY
-   ========================================================================== */
-.achievements-section {
-    padding: 6rem 2rem;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 4rem;
-}
-
+/* Typographic Stats Row Layout */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
     border: var(--border-clean);
     margin-bottom: 5rem;
-    background-color: var(--bg-card);
 }
 
 .stat-card {
-    padding: 3rem 2rem;
-    text-align: left;
+    padding: 2.5rem 1.5rem;
 }
 
 .stat-card:not(:last-child) {
@@ -241,22 +199,22 @@ body {
 
 .stat-number {
     display: block;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: var(--brand-polar-blue);
     line-height: 1;
     margin-bottom: 0.5rem;
-    letter-spacing: -2px;
 }
 
 .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
+/* Awards Split Block Layout */
 .awards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -264,105 +222,65 @@ body {
 }
 
 .award-era h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--brand-polar-blue);
-    margin-bottom: 1.5rem;
+    color: var(--brand-dark);
+    margin-bottom: 1rem;
 }
 
 .award-list {
     list-style: none;
-    display: flex;
-    flex-direction: column;
     border-top: var(--border-clean);
 }
 
 .award-list li {
     display: grid;
     grid-template-columns: 100px 1fr;
-    align-items: start;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--border-gray);
+    padding: 1rem 0;
+    border-bottom: var(--border-light);
+    font-size: 0.95rem;
 }
 
 .award-badge {
-    font-size: 0.75rem;
     font-weight: 700;
-    text-transform: uppercase;
     color: var(--brand-polar-blue);
-    letter-spacing: 0.5px;
-}
-
-.award-name {
-    font-size: 1.05rem;
-    font-weight: 400;
-    color: var(--text-main);
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 /* ==========================================================================
-   5. INTERACTIVE SUB-PAGES CONFIGURATIONS (Team Grid & Badges)
+   5. TEAM PORTFOLIO SUBPAGE LAYOUT
    ========================================================================== */
-.page-header {
-    margin-top: var(--nav-height);
-    background-color: var(--bg-card);
-    color: var(--brand-dark);
-    padding: 5rem 2rem;
-    border-bottom: var(--border-clean);
-}
-
-.header-content {
-    max-width: 1300px;
+.team-section {
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-.header-content h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: -1px;
-    margin-bottom: 0.5rem;
-}
-
-.header-content p {
-    color: var(--text-muted);
-    font-size: 1.05rem;
-}
-
-.team-section, .tiers-section, .outreach-section, .contact-section {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 6rem 2rem;
+    padding: 5rem 1.5rem;
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .member-card {
     background: var(--bg-main);
     border: var(--border-clean);
-    display: flex;
-    flex-direction: column;
 }
 
 .member-image-frame {
     width: 100%;
-    height: 280px;
-    background-color: #f1f5f9;
+    height: 260px;
+    background-color: var(--bg-card);
     border-bottom: var(--border-clean);
     position: relative;
 }
 
 .member-image-frame::before {
-    content: '[ CAD PHOTO CAPTURE ]';
+    content: '[ CAD ENGR RECORD ]';
     font-size: 0.7rem;
-    font-weight: 500;
     color: #94a3b8;
-    letter-spacing: 1px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -374,112 +292,347 @@ body {
     height: 100%;
     object-fit: cover;
     position: absolute;
-    z-index: 5;
+    top: 0;
+    left: 0;
 }
 
 .member-info-box {
     padding: 1.25rem;
-    text-align: left;
 }
 
 .member-name {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: var(--text-main);
     margin-bottom: 0.5rem;
 }
 
-/* Mechanical Text Badges Styling */
-.member-role, .tier-badge, .outreach-tag {
+.member-role {
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    display: inline-block;
-    border: 1px solid var(--brand-polar-blue);
+    border: 1px solid var(--text-main);
     padding: 0.15rem 0.5rem;
-    color: var(--brand-polar-blue);
-    background: #f0f9ff;
+    display: inline-block;
 }
 
-/* Specific Role Identity Badge Tints */
 .role-captain { background-color: #e0f2fe; color: #0369a1; border-color: #0369a1; }
 .role-build { background-color: #f8fafc; color: var(--text-main); border-color: var(--brand-dark); }
 .role-code { background-color: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
 
 /* ==========================================================================
-   6. SPONSOR TIERS & OUTREACH COMPACT UNITS
+   6. SPONSORS SUBPAGE LAYOUT (Document Matrix View)
    ========================================================================== */
 .pitch-section {
-    padding: 5rem 2rem 0 2rem;
-    max-width: 1300px;
+    padding: 5rem 1.5rem 0 1.5rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .pitch-container {
-    max-width: 800px;
-    text-align: left;
+    max-width: 750px;
 }
 
-.pitch-container h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+.tiers-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem 1.5rem;
 }
 
 .tiers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .tier-card {
-    background: var(--bg-card);
+    background: var(--bg-main);
     border: var(--border-clean);
-    padding: 2.5rem 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
 }
 
+.tier-card.tier-featured {
+    border: 2px solid var(--brand-polar-blue);
+    background-color: #f0f9ff;
+}
+
+.tier-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid #121212;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+}
+
+.badge-silver { background-color: #f1f5f9; color: #475569; border-color: #cbd5e1; }
+.badge-gold { background-color: #fef3c7; color: #d97706; border-color: #fde68a; }
+.badge-platinum { background-color: #e0f2fe; color: #0369a1; border-color: #bae6fd; }
+.badge-grand { background-color: #ecfdf5; color: #065f46; border-color: #a7f3d0; }
+
+.tier-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.tier-price span {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.tier-benefits {
+    list-style: none;
+    border-top: 1px solid var(--text-main);
+    padding-top: 1.5rem;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.tier-benefits li {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.tier-benefits li::before {
+    content: "▪";
+    position: absolute;
+    left: 0;
+    color: var(--brand-polar-blue);
+}
+
+/* ==========================================================================
+   7. OUTREACH SUBPAGE LAYOUT (Human & Structural)
+   ========================================================================== */
+.outreach-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem 1.5rem;
+}
+
+.outreach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.outreach-card {
+    border: var(--border-clean);
+    background: var(--bg-main);
+}
+
+.outreach-image-slot {
+    width: 100%;
+    height: 200px;
+    background-color: var(--bg-card);
+    border-bottom: var(--border-clean);
+    position: relative;
+}
+
+.outreach-image-slot::before {
+    content: '[ VISUAL ARCHIVE BLOCK ]';
+    font-size: 0.75rem;
+    color: #94a3b8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outreach-tag {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid var(--text-main);
+    padding: 0.15rem 0.5rem;
+    background: #ffffff;
+}
+
+.outreach-info {
+    padding: 1.5rem;
+}
+
+.outreach-info h3 {
+    font-size: 1.35rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.outreach-info p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   8. ROBOT REVEAL PLAN (Blueprint Frame Architecture)
+   ========================================================================== */
+.robot-reveal-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem 1.5rem;
+}
+
+.reveal-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+    align-items: center;
+}
+
+.reveal-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid var(--text-main);
+    padding: 0.15rem 0.5rem;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.robot-reveal-section h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.robot-reveal-section .gradient-text {
+    color: var(--brand-polar-blue);
+}
+
+.blueprint-card-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: var(--brand-dark);
     border: var(--border-clean);
-    background-color: var(--bg-card);
+    position: relative;
+}
+
+.blueprint-grid-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 25px 25px;
+    background-image:
+        linear-gradient(to right, rgba(14, 165, 233, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14, 165, 233, 0.08) 1px, transparent 1px);
+}
+
+.blueprint-content {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   9. INTERACTIVE CONTACT PANEL (Split Module Grid)
+   ========================================================================== */
+.contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem 1.5rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: var(--border-clean);
 }
 
 .contact-info-panel {
     background-color: var(--brand-dark);
     color: #ffffff;
-    padding: 4rem;
+    padding: 3rem;
 }
 
 .contact-info-panel h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info-panel p {
+    color: #94a3b8;
+    margin-bottom: 2.5rem;
+}
+
+.info-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--brand-light-blue);
+    margin-bottom: 0.25rem;
+}
+
+.info-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
 }
 
 .contact-form-panel {
-    padding: 4rem;
+    padding: 3rem;
     background-color: var(--bg-main);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
 
 .form-group input, 
 .form-group textarea {
     font-family: inherit;
-    border: 1px solid var(--border-gray);
-    background-color: #f8fafc;
+    border: var(--border-clean);
+    background-color: var(--bg-card);
     padding: 0.75rem;
-    border-radius: 0; /* Strict angular corners */
+    border-radius: 0;
     width: 100%;
-    margin-bottom: 1rem;
 }
 
 .form-group input:focus, 
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--brand-polar-blue);
     background-color: #ffffff;
+    border-color: var(--brand-polar-blue);
 }
 
 .btn-submit {
@@ -487,12 +640,12 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 0.8rem;
     padding: 0.75rem 2rem;
     border: none;
     cursor: pointer;
-    width: auto;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.15s ease;
 }
 
 .btn-submit:hover {
@@ -500,28 +653,28 @@ body {
 }
 
 /* ==========================================================================
-   9. GLOBAL HUMANIZED FOOTER SYSTEM
+   10. HUMANIZED GRID SYSTEM FOOTER
    ========================================================================== */
 .footer {
-    background-color: var(--bg-card);
+    background-color: var(--bg-main);
     color: var(--text-main);
-    padding: 5rem 2rem 3rem 2rem;
+    padding: 5rem 1.5rem 3rem 1.5rem;
     border-top: var(--border-clean);
 }
 
 .footer-container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 4rem;
     padding-bottom: 3rem;
-    border-bottom: var(--border-clean);
+    border-bottom: var(--border-light);
 }
 
 .footer-brand .footer-logo {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -533,9 +686,9 @@ body {
 
 .footer-contact h4, 
 .footer-socials h4 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     margin-bottom: 1rem;
 }
 
@@ -543,7 +696,7 @@ body {
 .social-links a {
     color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.15s ease;
 }
 
 .footer-email:hover, 
@@ -554,23 +707,24 @@ body {
 .social-links { 
     display: flex; 
     flex-direction: column; 
-    gap: 0.5rem; 
+    gap: 0.35rem; 
 }
 
 .footer-bottom {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding-top: 2rem;
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
 /* ==========================================================================
-   10. MOBILE RESPONSIVENESS OVERRIDES
+   11. FLUID RESPONSIVE MOBILE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 968px) {
+    .header-content h1, 
     .hero-content h1 { 
-        font-size: 3rem; 
+        font-size: 2.5rem; 
     }
     .about-container, 
     .awards-container, 
@@ -579,7 +733,7 @@ body {
     .contact-container, 
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
     }
     .stats-grid { 
         grid-template-columns: 1fr; 
