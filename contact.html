@@ -14,10 +14,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-wrapper">
-            <div class="nav-logo">
+            <a class="nav-logo" href="index.html">
                 <span class="logo-text">Wolves White</span>
                 <span class="logo-team">#19897</span>
-            </div>
+            </a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="team.html" class="nav-link">Team</a></li>
@@ -40,7 +40,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section style="padding: 7rem 0; border-bottom: 1px solid var(--line);">
+    <section style="padding: 5rem 0; border-bottom: 1px solid var(--line);">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-left">
@@ -63,20 +63,20 @@
                 <div class="contact-right">
                     <form action="https://formspree.io/f/xqpadjaw" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem;">
                         <div>
-                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Name</label>
-                            <input type="text" name="name" placeholder="John Doe" required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;" for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
                         </div>
                         <div>
-                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Email</label>
-                            <input type="email" name="_replyto" placeholder="you@example.com" required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;" for="_replyto">Email</label>
+                            <input type="email" id="_replyto" name="_replyto" placeholder="you@example.com" required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
                         </div>
                         <div>
-                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Subject</label>
-                            <input type="text" name="subject" placeholder="Sponsorship, Outreach, etc." required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;" for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Sponsorship, Outreach, etc." required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem;" />
                         </div>
                         <div>
-                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;">Message</label>
-                            <textarea name="message" rows="5" placeholder="Your message..." required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem; resize: vertical;"></textarea>
+                            <label style="display: block; font-size: .85rem; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .6rem;" for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message..." required style="width: 100%; padding: .85rem; border: 1px solid var(--line); border-radius: 4px; font-family: Inter, sans-serif; font-size: 1rem; resize: vertical;"></textarea>
                         </div>
                         <input type="hidden" name="_subject" value="New message from Jasper Wolves White" />
                         <button type="submit" class="btn btn-primary">Send Message</button>
@@ -98,7 +98,7 @@
                 <a href="mailto:jasperwolveswhite@gmail.com">jasperwolveswhite@gmail.com</a>
                 <div class="social-links">
                     <a href="https://instagram.com/jasper_white_robotics" target="_blank" rel="noopener">Instagram</a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+
                 </div>
             </div>
             <div class="footer-section">
