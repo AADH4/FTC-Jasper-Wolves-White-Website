@@ -76,4 +76,5 @@ body.page-leaving{animation:none;opacity:0;transform:translateY(-5px);transition
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 20px;
+  object-position: center top;
 }
