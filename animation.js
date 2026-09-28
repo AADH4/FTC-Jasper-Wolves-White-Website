@@ -34,3 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
         revealObserver.observe(section);
     });
 });
+
+// A quiet exit animation for links between pages in this site.
+document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.target || link.hasAttribute('download')) return;
+    const destination = new URL(link.href, location.href);
+    if (destination.origin !== location.origin || destination.pathname === location.pathname || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    event.preventDefault();
+    document.body.classList.add('page-leaving');
+    window.setTimeout(() => { location.href = destination.href; }, 160);
+});
+window.addEventListener('pageshow', () => document.body.classList.remove('page-leaving'));
