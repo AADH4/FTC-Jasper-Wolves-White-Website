@@ -70,11 +70,15 @@ body.page-leaving{animation:none;opacity:0;transform:translateY(-5px);transition
 :root[data-theme="dark"] .blueprint-placeholder{background:#173a56;color:var(--ink)}
 :root[data-theme="dark"] .blueprint-grid{background:linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:32px 32px}
 @media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
+/* Uniform team portraits: preserve faces while cropping the lower part of tall photos. */
 .member-photo {
+  display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 210px;
+  flex: none;
   object-fit: cover;
+  object-position: center top;
   border-radius: 4px;
   margin-bottom: 20px;
-  object-position: center top;
 }
+.member-photo.photo-ashmita { object-position: center 30%; }
