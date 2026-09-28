@@ -70,3 +70,10 @@ body.page-leaving{animation:none;opacity:0;transform:translateY(-5px);transition
 :root[data-theme="dark"] .blueprint-placeholder{background:#173a56;color:var(--ink)}
 :root[data-theme="dark"] .blueprint-grid{background:linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:32px 32px}
 @media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
+.member-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
