@@ -46,3 +46,21 @@ document.addEventListener('click', (event) => {
     window.setTimeout(() => { location.href = destination.href; }, 160);
 });
 window.addEventListener('pageshow', () => document.body.classList.remove('page-leaving'));
+
+// Keep the theme choice across all six pages.
+document.querySelectorAll('.theme-toggle').forEach((button) => {
+    const render = () => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        button.setAttribute('aria-pressed', String(dark));
+        button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        button.querySelector('.theme-icon').textContent = dark ? '☀' : '☾';
+        button.querySelector('.theme-label').textContent = dark ? 'Light' : 'Dark';
+    };
+    render();
+    button.addEventListener('click', () => {
+        const dark = document.documentElement.dataset.theme !== 'dark';
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        try { localStorage.setItem('jw-theme', dark ? 'dark' : 'light'); } catch (e) {}
+        render();
+    });
+});
