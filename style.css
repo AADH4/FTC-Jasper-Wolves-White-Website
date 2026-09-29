@@ -83,5 +83,7 @@ body.page-leaving{animation:none;opacity:0;transform:translateY(-5px);transition
 }
 .member-photo.photo-ashmita { object-position: center 30%; }
 .member-photo.photo-aarav { object-position: center 20%; }
-.member-photo.photo-abhijay { object-position: center 17%; }
-.member-photo.photo-ryan { object-position: center 25%; }
+.portrait-crop { height: 210px; overflow: hidden; border-radius: 4px; margin-bottom: 20px; }
+.portrait-crop .member-photo { max-width: none; height: 210px; margin-bottom: 0; border-radius: 0; }
+.portrait-crop .photo-abhijay { width: 140%; margin-left: -20%; object-position: center 15%; }
+.portrait-crop .photo-ryan { width: 160%; margin-left: -6px; object-position: center 15%; }
